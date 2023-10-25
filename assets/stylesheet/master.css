@@ -1,0 +1,468 @@
+.test {
+  background-color: rgb(252, 215, 168);
+  border: 1px solid blueviolet;
+}
+
+.test2 {
+  background-color: rgb(228, 168, 252);
+  border: 1px solid rgb(129, 129, 129);
+}
+
+.head {
+  background-image: url(../image/banner-02.jpg);
+  background-size: cover;
+  background-position-x: 40%;
+  position: relative;
+}
+.head > .dark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4509803922);
+}
+.head > img:nth-of-type(1) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(-1);
+  z-index: 1;
+}
+.head > img:nth-of-type(2) {
+  position: absolute;
+  width: 100%;
+  bottom: -1%;
+  left: 0;
+  z-index: 2;
+}
+.head > .row > * {
+  width: 100%;
+  padding: 10px 50px;
+  position: relative;
+  z-index: 5;
+}
+.head > .row > header {
+  text-transform: capitalize;
+}
+.head > .row > header > .row > * {
+  height: 100px;
+}
+.head > .row > header > .row > figure {
+  width: 25%;
+  display: flex;
+}
+.head > .row > header > .row > figure > img {
+  width: 80%;
+  height: 100%;
+}
+.head > .row > header > .row > nav {
+  width: 50%;
+}
+.head > .row > header > .row > nav > .row {
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.head > .row > header > .row > nav > .row > li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.head > .row > header > .row > nav > .row > li > a {
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #FFFFFF;
+  position: relative;
+}
+.head > .row > header > .row > nav > .row > li > a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  bottom: -30%;
+  background-color: #FFFFFF;
+  transition: 0.7s;
+}
+.head > .row > header > .row > nav > .row > li > a:hover::after {
+  width: 120%;
+  left: 0;
+}
+.head > .row > header > .row > nav > .row > li > i {
+  color: #FFFFFF;
+  margin-left: 5px;
+  font-style: normal;
+}
+.head > .row > header > .row > div {
+  width: 25%;
+}
+.head > .row > header > .row > div > .row {
+  height: 100%;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.head > .row > header > .row > div > .row > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2vw;
+  transition: 0.7s;
+}
+.head > .row > header > .row > div > .row > a:first-of-type {
+  width: 66%;
+  height: 50px;
+  border: 1px solid #FFFFFF;
+  border-radius: 50px;
+  margin-right: 20px;
+  color: #FFFFFF;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.head > .row > header > .row > div > .row > a:first-of-type:hover {
+  border: none;
+}
+.head > .row > header > .row > div > .row > a:first-of-type > span {
+  display: flex;
+  transition: 0.7s;
+}
+.head > .row > header > .row > div > .row > a:first-of-type > span:first-of-type {
+  margin-top: 15px;
+}
+.head > .row > header > .row > div > .row > a:first-of-type > span:last-of-type {
+  margin-top: 50px;
+}
+.head > .row > header > .row > div > .row > a:first-of-type:hover > span:first-of-type {
+  margin-top: -50px;
+}
+.head > .row > header > .row > div > .row > a:first-of-type:hover > span:last-of-type {
+  margin-top: -30px;
+}
+.head > .row > header > .row > div > .row > a:last-of-type {
+  width: 50px;
+  height: 50px;
+  color: #0A1819;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+.head > .row > header > .row > div > .row > a:hover {
+  background-color: #ffd979;
+}
+.head > .row > section {
+  padding: 100px 50px;
+  text-transform: capitalize;
+}
+.head > .row > section > .row {
+  width: 70%;
+}
+.head > .row > section > .row > * {
+  color: #FFFFFF;
+  width: 100%;
+}
+.head > .row > section > .row > .row {
+  align-items: center;
+  font-size: 1.2vw;
+}
+.head > .row > section > .row > .row > span {
+  color: #0A1819;
+  padding: 5px;
+  background-color: #FFFFFF;
+  margin-right: 30px;
+}
+.head > .row > section > .row > h1 {
+  margin-top: 30px;
+  font-size: 4.5vw;
+  font-weight: bold;
+  position: relative;
+}
+.head > .row > section > .row > p {
+  margin-top: 30px;
+  width: 80%;
+  font-size: 1.3vw;
+}
+.head > .row > section > .row > a {
+  margin: 40px 0 60px 0;
+  border-radius: 50px;
+  background-color: #3269FF;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.head > .row > section > .row > a > span {
+  display: flex;
+  transition: 0.7s;
+}
+.head > .row > section > .row > a > span:first-of-type {
+  margin-top: 15px;
+}
+.head > .row > section > .row > a > span:last-of-type {
+  margin-top: 50px;
+}
+.head > .row > section > .row > a:hover > span:first-of-type {
+  margin-top: -50px;
+}
+.head > .row > section > .row > a:hover > span:last-of-type {
+  margin-top: -27px;
+}
+
+.services {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+.services > .row {
+  padding: 100px 0px;
+}
+.services > .row > * {
+  width: 100%;
+}
+.services > .row > div:nth-of-type(1) > .row {
+  justify-content: center;
+}
+.services > .row > div:nth-of-type(1) > .row * {
+  text-align: center;
+  width: 70%;
+}
+.services > .row > div:nth-of-type(1) > .row > h3 {
+  color: #3b5f8b;
+  font-weight: lighter;
+}
+.services > .row > div:nth-of-type(1) > .row h2 {
+  font-size: 2.8vw;
+  margin-top: 20px;
+}
+.services > .row > div:nth-of-type(2) {
+  margin-top: 50px;
+  text-transform: capitalize;
+}
+.services > .row > div:nth-of-type(2) .row {
+  justify-content: space-evenly;
+}
+.services > .row > div:nth-of-type(2) .row > article {
+  margin: 0 10px;
+  width: 350px;
+  transition: 0.4s;
+}
+.services > .row > div:nth-of-type(2) .row > article > .row {
+  justify-content: center;
+}
+.services > .row > div:nth-of-type(2) .row > article > .row > * {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.services > .row > div:nth-of-type(2) .row > article > .row > span {
+  color: #3b5f8b;
+  width: 100%;
+  font-style: normal;
+  font-size: 3vw;
+}
+.services > .row > div:nth-of-type(2) .row > article > .row > h3 {
+  width: 100%;
+}
+.services > .row > div:nth-of-type(2) .row > article > .row > p {
+  text-align: center;
+  color: #464646;
+}
+.services > .row > div:nth-of-type(2) .row > article > .row > a {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ffd979;
+}
+.services > .row > div:nth-of-type(2) .row > article:hover {
+  transform: translateY(-10px);
+}
+
+.photo {
+  padding: 10px;
+  width: 100%;
+  background-color: #FFFFFF;
+  overflow-y: hidden;
+}
+.photo > .row {
+  justify-content: space-evenly;
+}
+.photo > .row > div {
+  align-items: center;
+  width: 560px;
+  height: 360px;
+  background-size: cover;
+  transition: 0.4s;
+  position: relative;
+  cursor: pointer;
+}
+.photo > .row > div::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.368627451);
+}
+.photo > .row > div:nth-of-type(1) {
+  background-image: url(../image/box-1.jpg);
+}
+.photo > .row > div:nth-of-type(2) {
+  background-image: url(../image/banner-13.jpg);
+}
+.photo > .row > div:hover {
+  transform: scale(1.05);
+  border-radius: 2px;
+}
+.photo > .row > div:hover:nth-of-type(1) {
+  border: 1px solid #ffd979;
+}
+.photo > .row > div:hover:nth-of-type(2) {
+  border: 1px solid #3b5f8b;
+}
+.photo > .row > div > div {
+  width: 80%;
+  height: 100%;
+  align-self: flex-end;
+  margin: 170px 50px 0 50px;
+}
+.photo > .row > div > div * {
+  position: relative;
+  align-items: center;
+  z-index: 2;
+}
+.photo > .row > div > div h2 {
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 2.5vw;
+  margin-bottom: 40px;
+}
+.photo > .row > div > div p {
+  width: 100%;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+.photo > .row > div > div a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 2vw;
+  padding: 15px;
+  font-weight: lighter;
+  background-color: #FFFFFF;
+}
+
+footer {
+  width: 100%;
+  background-color: #0A1819;
+  margin: 100px 0 0;
+  overflow: hidden;
+}
+footer > .row > div:nth-of-type(1) {
+  width: 100%;
+  color: white;
+  font-size: 1.3vw;
+  position: relative;
+}
+footer > .row > div:nth-of-type(1) > figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+footer > .row > div:nth-of-type(1) > figure > img {
+  width: 100%;
+}
+footer > .row > div:nth-of-type(1) > .row {
+  justify-content: space-between;
+  padding: 100px 0px;
+  margin: 0 30px;
+  border-bottom: 1px solid gainsboro;
+  position: relative;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(2) > li:nth-of-type(1) {
+  border-bottom: 2px solid #3269FF;
+}
+footer > .row > div:nth-of-type(1) > .row > ul > li {
+  margin: 20px;
+  border-top: 0px solid black;
+  padding: 5px;
+  width: 150px;
+  transition: 1s;
+}
+footer > .row > div:nth-of-type(1) > .row > ul > li:hover {
+  border-bottom: 2px solid #3269FF;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) {
+  width: 400px;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li {
+  border-bottom: none;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(1) {
+  text-transform: uppercase;
+  font-size: 1.8vw;
+  width: 100%;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(1) > a {
+  display: flex;
+  align-items: center;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(1) > a > img {
+  width: 20%;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(2), footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(3) {
+  width: 250px;
+  height: 70px;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(2) > a, footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(3) > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50px;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(2) > a:hover > span:nth-of-type(1), footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(3) > a:hover > span:nth-of-type(1) {
+  margin-top: -180px;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(2) > a > span, footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(3) > a > span {
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+  font-size: 1.2vw;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(2) > a > span > i, footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(3) > a > span > i {
+  margin: 0 5px;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(2) > a > span:nth-of-type(1), footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(3) > a > span:nth-of-type(1) {
+  background-color: #3269FF;
+}
+footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(2) > a > span:nth-of-type(2), footer > .row > div:nth-of-type(1) > .row > ul:nth-of-type(1) > li:nth-of-type(3) > a > span:nth-of-type(2) {
+  background-color: #3b5f8b;
+}
+footer > .row > div:nth-of-type(2) {
+  padding: 40px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+footer > .row > div:nth-of-type(2) > .row {
+  justify-content: space-between;
+  color: white;
+}
+footer > .row > div:nth-of-type(2) > .row > p {
+  font-size: 1.2vw;
+  width: 50%;
+}
+footer > .row > div:nth-of-type(2) > .row > ul {
+  font-size: 1.5vw;
+}
+footer > .row > div:nth-of-type(2) > .row > ul > li {
+  margin: 0 10px;
+}/*# sourceMappingURL=master.css.map */

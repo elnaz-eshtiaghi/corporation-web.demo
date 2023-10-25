@@ -1,0 +1,691 @@
+$dblue: #213288;
+$text: #FFFFFF;
+$text2: #0A1819;
+$gray: #3b5f8b;
+$yellow: #ffd979;
+$btn: #3269FF;
+$bt2: #09154E;
+
+// ...colors
+$navfont: 1.5vw;
+
+.test {
+    background-color: rgb(252, 215, 168);
+    border: 1px solid blueviolet;
+}
+
+.test2 {
+    background-color: rgb(228, 168, 252);
+    border: 1px solid rgb(129, 129, 129);
+}
+
+// start-header...
+.head {
+
+    $flag: 0;
+    background-image: url(../image/banner-02.jpg);
+    background-size: cover;
+    background-position-x: 40%;
+    position: relative;
+
+    // ...banner-photo
+    >.dark {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #00000073;
+    }
+
+    >img {
+        &:nth-of-type(1) {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform: scale(-1);
+            z-index: 1;
+        }
+
+        &:nth-of-type(2) {
+            position: absolute;
+            width: 100%;
+            bottom: -1%;
+            left: 0;
+            z-index: 2;
+
+        }
+    }
+
+    >.row {
+
+        @if $flag>2 {
+            border: 1px solid red;
+        }
+
+        >* {
+            width: 100%;
+            padding: 10px 50px;
+            position: relative;
+            z-index: 5;
+
+            @if $flag>2 {
+                border: 1px solid rgb(4, 0, 255);
+            }
+        }
+
+        // ...header1
+        >header {
+            text-transform: capitalize;
+
+            >.row {
+                >* {
+                    height: 100px;
+
+                    @if $flag>2 {
+                        @extend.test;
+                    }
+                }
+
+                >figure {
+                    width: 25%;
+                    display: flex;
+
+                    >img {
+                        width: 80%;
+                        height: 100%;
+                    }
+                }
+
+                // ...menu
+                >nav {
+                    width: 50%;
+
+                    >.row {
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 100%;
+
+                        @if $flag>2 {
+                            background-color: #FFFFFF;
+                        }
+
+                        >li {
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+
+                            @if $flag>2 {
+                                @extend.test;
+                            }
+
+                            >a {
+                                font-size: $navfont;
+                                font-weight: bold;
+                                color: $text;
+                                position: relative;
+
+                                &::after {
+                                    content: '';
+                                    width: 0%;
+                                    height: 2px;
+                                    position: absolute;
+                                    left: 50%;
+                                    bottom: -30%;
+                                    background-color: $text;
+                                    transition: 0.7s;
+                                }
+
+                                &:hover::after {
+                                    width: 120%;
+                                    left: 0;
+                                }
+
+                            }
+
+                            >i {
+                                color: $text;
+                                margin-left: 5px;
+                                font-style: normal;
+
+                            }
+                        }
+                    }
+                }
+
+                // ...end-menu
+                >div {
+                    width: 25%;
+
+                    >.row {
+                        height: 100%;
+                        justify-content: end;
+                        align-items: center;
+                        flex-wrap: nowrap;
+
+                        >a {
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-weight: bold;
+                            font-size: 1.2vw;
+                            transition: 0.7s;
+
+                            &:first-of-type {
+                                width: 66%;
+                                height: 50px;
+                                border: 1px solid $text;
+                                border-radius: 50px;
+                                margin-right: 20px;
+                                color: $text;
+                                flex-wrap: wrap;
+                                overflow: hidden;
+
+                                &:hover {
+                                    border: none;
+
+                                }
+
+                                >span {
+                                    display: flex;
+                                    transition: 0.7s;
+
+                                    &:first-of-type {
+                                        margin-top: 15px;
+                                    }
+
+                                    &:last-of-type {
+                                        margin-top: 50px;
+                                    }
+
+                                }
+
+                                &:hover>span {
+                                    &:first-of-type {
+                                        margin-top: -50px;
+                                    }
+
+                                    &:last-of-type {
+                                        margin-top: -30px;
+                                    }
+                                }
+                            }
+
+                            &:last-of-type {
+                                width: 50px;
+                                height: 50px;
+                                color: $text2;
+                                background-color: $text;
+                                border-radius: 50%;
+                            }
+
+                            &:hover {
+                                background-color: $yellow;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // ...header2
+        >section {
+            $flag: 0;
+            padding: 100px 50px;
+            text-transform: capitalize;
+
+            @if $flag>2 {
+                border: 1px solid red;
+            }
+
+            >.row {
+                width: 70%;
+
+                @if $flag>2 {
+                    border: 1px solid rgb(0, 81, 255);
+                }
+
+                >* {
+                    color: $text;
+
+                    @if $flag>2 {
+                        @extend.test;
+                    }
+
+                    width: 100%;
+                }
+
+                >.row {
+                    align-items: center;
+                    font-size: 1.2vw;
+
+                    >span {
+                        color: $text2;
+                        padding: 5px;
+                        background-color: $text;
+                        margin-right: 30px;
+                    }
+
+                }
+
+                >h1 {
+                    margin-top: 30px;
+                    font-size: 4.5vw;
+                    font-weight: bold;
+                    position: relative;
+
+                }
+
+                >p {
+                    margin-top: 30px;
+                    width: 80%;
+                    font-size: 1.3vw;
+                }
+
+                >a {
+                    margin: 40px 0 60px 0;
+                    border-radius: 50px;
+                    background-color: $btn;
+                    width: 200px;
+                    height: 50px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+
+                    >span {
+                        display: flex;
+                        transition: 0.7s;
+
+                        &:first-of-type {
+                            margin-top: 15px;
+                        }
+
+                        &:last-of-type {
+                            margin-top: 50px;
+                        }
+
+                    }
+
+                    &:hover>span {
+                        &:first-of-type {
+                            margin-top: -50px;
+                        }
+
+                        &:last-of-type {
+                            margin-top: -27px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// ...end-header
+// start-part1-services...
+.services {
+    $flag: 0;
+    width: 100%;
+    background-color: $text;
+
+    @if $flag>2 {
+        border: 1px solid red;
+    }
+
+    >.row {
+        padding: 100px 0px;
+
+        >* {
+            width: 100%;
+
+            @if $flag>2 {
+                @extend.test;
+            }
+        }
+
+        >div {
+            &:nth-of-type(1) {
+                >.row {
+                    justify-content: center;
+
+                    * {
+                        text-align: center;
+                        width: 70%;
+                    }
+
+                    >h3 {
+                        color: $gray;
+                        font-weight: lighter;
+                    }
+
+                    h2 {
+
+                        font-size: 2.8vw;
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+            // articles
+            &:nth-of-type(2) {
+                margin-top: 50px;
+                text-transform: capitalize;
+
+                .row {
+                    justify-content: space-evenly;
+
+                    >article {
+                        margin: 0 10px;
+                        width: 350px;
+                        transition: 0.4s;
+
+                        >.row {
+                            justify-content: center;
+
+                            >* {
+
+                                display: flex;
+                                justify-content: center;
+                                margin-bottom: 30px;
+
+                                @if $flag>2 {
+                                    @extend.test2;
+                                }
+                            }
+
+                            >span {
+                                color: $gray;
+                                width: 100%;
+                                font-style: normal;
+                                font-size: 3vw;
+
+                            }
+
+                            >h3 {
+                                width: 100%;
+                            }
+
+                            >p {
+                                text-align: center;
+                                color: #464646;
+                            }
+
+                            >a {
+                                padding-bottom: 10px;
+                                border-bottom: 2px solid $yellow;
+
+                            }
+                        }
+
+                        &:hover {
+                            transform: translateY(-10px);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+// ...end-part1-services
+// start-part2-photo...
+.photo {
+    $flag: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: $text;
+    overflow-y: hidden;
+
+    @if $flag>2 {
+        border: 1px solid red;
+    }
+
+    >.row {
+        justify-content: space-evenly;
+        // photo
+
+        >div {
+            @if $flag>2 {
+                @extend .test;
+            }
+
+            align-items: center;
+            width: 560px;
+            height: 360px;
+            background-size: cover;
+            transition: 0.4s;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: #0000005e;
+            }
+
+            &:nth-of-type(1) {
+                background-image: url(../image/box-1.jpg);
+            }
+
+            &:nth-of-type(2) {
+                background-image: url(../image/banner-13.jpg);
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                border-radius: 2px;
+
+                &:nth-of-type(1) {
+                    border: 1px solid $yellow;
+                }
+
+                &:nth-of-type(2) {
+                    border: 1px solid $gray;
+                }
+
+            }
+
+            >div {
+                width: 80%;
+                height: 100%;
+                align-self: flex-end;
+                margin: 170px 50px 0 50px;
+
+                * {
+                    position: relative;
+
+                    align-items: center;
+                    z-index: 2;
+
+                    @if $flag>2 {
+                        @extend .test2;
+                    }
+
+                }
+
+                h2 {
+                    width: 100%;
+                    color: $text;
+                    font-size: 2.5vw;
+                    margin-bottom: 40px;
+
+                }
+
+                p {
+                    width: 100%;
+                    color: $text;
+                    margin-bottom: 40px;
+                }
+
+                a {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-size: 2vw;
+                    padding: 15px;
+                    font-weight: lighter;
+                    background-color: $text;
+                }
+            }
+
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: #0A1819;
+    margin: 100px 0 0;
+    overflow: hidden;
+    >.row {
+        >div {
+            &:nth-of-type(1) {
+                width: 100%;
+                color: white;
+                font-size: 1.3vw;
+                position: relative;
+                >figure{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    >img{
+                        width: 100%;
+                    }
+                }
+                >.row {
+                    justify-content: space-between;
+                    padding: 100px 0px;
+                    margin: 0 30px;
+                    border-bottom: 1px solid gainsboro;
+                    position: relative;
+                    
+                    >ul {
+
+                        &:nth-of-type(2) {
+                            >li {
+                                &:nth-of-type(1) {
+                                    border-bottom: 2px solid $btn;
+                                }
+                            }
+                        }
+
+                        >li {
+                            margin: 20px;
+                            border-top: 0px solid black;
+                            padding: 5px;
+                            width: 150px;
+                            transition: 1s;
+                            &:hover {
+                                border-bottom: 2px solid $btn;
+                            }
+                        }
+
+                        &:nth-of-type(1) {
+                            width: 400px;
+
+                            >li {
+                                border-bottom: none;
+
+                                &:nth-of-type(1) {
+                                    text-transform: uppercase;
+                                    font-size: 1.8vw;
+                                    width: 100%;
+                                    >a{
+                                        display: flex;
+                                        align-items: center;
+                                        >img{
+                                            width: 20%;
+                                        }
+                                    }
+                                }
+
+                                &:nth-of-type(2),
+                                &:nth-of-type(3) {
+                                    width: 250px;
+                                    height: 70px;
+
+                                    >a {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        align-items: center;
+                                        justify-content: center;
+                                        overflow: hidden;
+
+                                        border-radius: 50px;
+
+                                        &:hover {
+                                            >span {
+                                                &:nth-of-type(1) {
+                                                    margin-top: -180px;
+                                                }
+                                            }
+                                        }
+
+                                        >span {
+
+                                            border-radius: 50px;
+                                            width: 100%;
+                                            height: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            transition: 1s;
+                                            font-size: 1.2vw;
+                                            >i{
+                                                margin:  0 5px;
+                                            }
+                                            &:nth-of-type(1) {
+
+                                                background-color: $btn;
+                                            }
+                                            &:nth-of-type(2) {
+
+                                                background-color: $gray;
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:nth-of-type(2) {
+                padding:  40px;
+                width: 100%;
+                position: relative;
+                z-index: 1;
+                >.row{
+                    justify-content: space-between;
+                    color: white;
+                    >p{
+                        font-size: 1.2vw;
+                        width: 50%;
+                       
+                    }
+                    >ul{
+                        >li{
+                            margin:0 10px ;
+                        }
+                        font-size: 1.5vw;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,9 +1,9 @@
-# corporation-demo(flexbox)
+# Corporation-demo(flexbox)
 
 **If you have a lot of information to display on your site, why don't you use my project**
 
 ![Screenshot_2023_10_24-2](https://github.com/elnaz-eshtiaghi/project.2/assets/146030206/7609aa7f-3350-4273-a7cf-e2d76619d525)
-- [Demo Project]( https://elnaz-eshtiaghi.github.io/corporation-demo/)
+- [Demo Project]( https://elnaz-eshtiaghi.github.io/corporation-web.demo/)
 
 - Developed by elnaz eshtiaghi
 
